@@ -1,0 +1,137 @@
+[gd_scene load_steps=7 format=3 uid="uid://dgujsmaaift45"]
+
+[ext_resource type="Texture2D" uid="uid://c0p81o71xb7wi" path="res://Menu/Pizza.webp" id="1_7yhg3"]
+[ext_resource type="Script" uid="uid://dlciumskvw24w" path="res://Menu/main_menu.gd" id="1_cs38m"]
+[ext_resource type="FontFile" uid="uid://dv30v7tyh34rw" path="res://Menu/Gloomie Saturday.otf" id="2_cs38m"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rlxw3"]
+texture = ExtResource("1_7yhg3")
+modulate_color = Color(0.733005, 0.733005, 0.733005, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b07fi"]
+corner_radius_top_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6lt7"]
+bg_color = Color(0, 0, 0, 0.0745098)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -13.0
+offset_top = -7.0
+offset_right = -13.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cs38m")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 8.0
+offset_right = 13.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_rlxw3")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -102.0
+offset_top = -25.0
+offset_right = 102.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_cs38m")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_b07fi")
+text = "Start"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -102.0
+offset_top = 31.0
+offset_right = 102.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_cs38m")
+theme_override_font_sizes/font_size = 30
+text = "Option"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -102.0
+offset_top = 85.0
+offset_right = 102.0
+offset_bottom = 135.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_cs38m")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_x6lt7")
+text = "Exit"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -139.0
+offset_top = 66.0
+offset_right = 239.0
+offset_bottom = 135.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0.690196, 0.0980392, 0.027451, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("2_cs38m")
+theme_override_font_sizes/font_size = 50
+text = "   Johnny's "
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -63.0
+offset_top = 119.0
+offset_right = 104.0
+offset_bottom = 188.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.403922, 1, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("2_cs38m")
+theme_override_font_sizes/font_size = 50
+text = "Pizza"
