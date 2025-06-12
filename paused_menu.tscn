@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://d4eo4qsn4vq4p"]
+[gd_scene load_steps=5 format=3 uid="uid://d4eo4qsn4vq4p"]
 
+[ext_resource type="Script" uid="uid://dhuhrw61xi1ln" path="res://paused_menu.gd" id="1_cufx8"]
 [ext_resource type="FontFile" uid="uid://dv30v7tyh34rw" path="res://Menu/Gloomie Saturday.otf" id="1_q68yk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7pu18"]
@@ -17,6 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_cufx8")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -36,7 +38,7 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_constants/separation = 5
 
-[node name="Button" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="Resume" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_q68yk")
@@ -44,7 +46,7 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_7pu18")
 text = "RESUME"
 
-[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="Restart" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_q68yk")
@@ -53,10 +55,14 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_7pu18")
 text = "Restart
 "
 
-[node name="Button3" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_q68yk")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_q68yk")
 text = "QUIT"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
