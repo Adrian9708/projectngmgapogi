@@ -7,6 +7,7 @@ func _redy():
 	update()
 	 
 	
-func udaye():
-	value = player.currentHealth * 100 player.maxHealth
+func update():
+	value = (player.currentHealth / player.maxHealth) * 100
+	
 	
