@@ -27,18 +27,18 @@ offset_bottom = 34.5
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 layout_mode = 0
-offset_left = 14.0
-offset_top = 23.5
-offset_right = 300.0
-offset_bottom = 50.5
+offset_left = 18.0
+offset_top = 24.0
+offset_right = 218.0
+offset_bottom = 44.0
 theme_override_styles/background = SubResource("StyleBoxFlat_m7ell")
 theme_override_styles/fill = SubResource("StyleBoxFlat_kdjhy")
 value = 60.0
 show_percentage = false
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(156, 37.5)
-scale = Vector2(7, 7)
+position = Vector2(118, 35)
+scale = Vector2(5, 5)
 texture = ExtResource("1_m7ell")
 hframes = 7
 vframes = 14
@@ -52,10 +52,10 @@ offset_bottom = 125.0
 
 [node name="Money label" type="Label" parent="Money Icon"]
 layout_mode = 0
-offset_left = -3.0
-offset_top = 12.0
-offset_right = 20.0
-offset_bottom = 67.0
+offset_left = -11.0
+offset_top = -15.0
+offset_right = 113.0
+offset_bottom = 27.0
 theme_override_colors/font_color = Color(0.34135, 0.658473, 1.92523e-07, 1)
-theme_override_font_sizes/font_size = 40
-text = "$ 1000"
+theme_override_font_sizes/font_size = 30
+text = "$ 100"
