@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0fk4by3fmc3d"]
+
+[ext_resource type="PackedScene" uid="uid://c4lccs8l5darl" path="res://1st person/addons/godot4.3_fps_character_controller/Player/player.tscn" id="1_honsa"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_honsa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0091393, 1, -0.0312308)
+script = null

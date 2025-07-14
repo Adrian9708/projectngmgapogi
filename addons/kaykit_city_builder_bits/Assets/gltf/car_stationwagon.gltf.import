@@ -36,6 +36,18 @@ _subresources={
 "nodes": {
 "PATH:car_stationwagon": {
 "generate/physics": true
+},
+"PATH:car_stationwagon/car_stationwagon_wheel_front_left": {
+"generate/physics": true
+},
+"PATH:car_stationwagon/car_stationwagon_wheel_front_right": {
+"generate/physics": true
+},
+"PATH:car_stationwagon/car_stationwagon_wheel_rear_left": {
+"generate/physics": true
+},
+"PATH:car_stationwagon/car_stationwagon_wheel_rear_right": {
+"generate/physics": true
 }
 }
 }
