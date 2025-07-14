@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://04qspb6cwmfg"]
+[gd_scene load_steps=38 format=3 uid="uid://04qspb6cwmfg"]
 
 [ext_resource type="PackedScene" uid="uid://becoxhxfk1pui" path="res://addons/kaykit_city_builder_bits/Assets/gltf/road_junction.gltf" id="1_w7lvx"]
 [ext_resource type="PackedScene" uid="uid://dvildgjppjm41" path="res://addons/kaykit_city_builder_bits/Assets/gltf/road_straight.gltf" id="2_txj3q"]
@@ -36,6 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://on2ehwcxmgup" path="res://addons/kaykit_city_builder_bits/Assets/gltf/dumpster.gltf" id="34_y4ifa"]
 [ext_resource type="PackedScene" uid="uid://dd8cbo2yoi615" path="res://addons/kaykit_city_builder_bits/Assets/gltf/trash_A.gltf" id="35_ecmx4"]
 [ext_resource type="PackedScene" uid="uid://bc58cxgdyb6ih" path="res://addons/kaykit_city_builder_bits/Assets/gltf/trash_B.gltf" id="36_hcdbq"]
+[ext_resource type="PackedScene" uid="uid://dgaexk2mqn6j8" path="res://addons/srcoder_thirdperson_controller/player.tscn" id="37_mhpks"]
 
 [node name="TestCity" type="Node3D"]
 
@@ -652,3 +653,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0.1, -13)
 
 [node name="bush14" parent="." instance=ExtResource("17_586u0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0.1, -15)
+
+[node name="Player" parent="." instance=ExtResource("37_mhpks")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -9)
