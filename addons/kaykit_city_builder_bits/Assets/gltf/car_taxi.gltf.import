@@ -34,16 +34,7 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:car_taxi/car_taxi_wheel_front_left": {
-"generate/physics": true
-},
-"PATH:car_taxi/car_taxi_wheel_front_right": {
-"generate/physics": true
-},
-"PATH:car_taxi/car_taxi_wheel_rear_left": {
-"generate/physics": true
-},
-"PATH:car_taxi/car_taxi_wheel_rear_right": {
+"PATH:car_taxi": {
 "generate/physics": true
 }
 }

@@ -36,18 +36,6 @@ _subresources={
 "nodes": {
 "PATH:car_hatchback": {
 "generate/physics": true
-},
-"PATH:car_hatchback/car_hatchback_wheel_front_left": {
-"generate/physics": true
-},
-"PATH:car_hatchback/car_hatchback_wheel_front_right": {
-"generate/physics": true
-},
-"PATH:car_hatchback/car_hatchback_wheel_rear_left": {
-"generate/physics": true
-},
-"PATH:car_hatchback/car_hatchback_wheel_rear_right": {
-"generate/physics": true
 }
 }
 }
