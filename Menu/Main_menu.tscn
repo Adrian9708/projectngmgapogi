@@ -44,7 +44,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_rlxw3")
 
-[node name="Button" type="Button" parent="."]
+[node name="Start" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -63,7 +63,7 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_b07fi")
 text = "Start"
 
-[node name="Button2" type="Button" parent="."]
+[node name="Option" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -80,7 +80,7 @@ theme_override_fonts/font = ExtResource("2_cs38m")
 theme_override_font_sizes/font_size = 30
 text = "Option"
 
-[node name="Button3" type="Button" parent="."]
+[node name="Exit" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -135,3 +135,5 @@ theme_override_constants/shadow_offset_y = 2
 theme_override_fonts/font = ExtResource("2_cs38m")
 theme_override_font_sizes/font_size = 50
 text = "Pizza"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
