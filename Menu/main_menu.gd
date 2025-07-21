@@ -1,13 +1,13 @@
 extends Control
 
 # Exported variables for easy configuration in the Godot editor
-@export var game_scene_path: String = "res://Scenes/Game.tscn"  # Path to your game scene
+@export var game_scene_path: String = "res://pizzamap.tscn"  # Path to your game scene
 @export var options_scene_path: String = "res://Scenes/Options.tscn"  # Path to your options scene
 
 # References to the buttons (Godot will connect these automatically if nodes are named correctly)
-@onready var start_button = $Button
-@onready var options_button = $Button2
-@onready var quit_button = $Button3
+@onready var start_button = $Start
+@onready var options_button = $Option
+@onready var quit_button = $Exit
 
 func _ready():
 	# Connect button signals to their respective functions
