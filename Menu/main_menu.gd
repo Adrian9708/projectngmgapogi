@@ -7,7 +7,7 @@ extends Control
 # References to the buttons (Godot will connect these automatically if nodes are named correctly)
 @onready var start_button = $Start
 @onready var options_button = $Option
-@onready var quit_button = $Exit
+@onready var quit_button = $Exit 
 
 func _ready():
 	# Connect button signals to their respective functions
