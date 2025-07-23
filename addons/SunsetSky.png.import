@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b01vv6qc3japu"
-path.s3tc="res://.godot/imported/DarkPrototypeTexture.png-7076d870e2cdc1148bc8f4c589ab5ef6.s3tc.ctex"
+uid="uid://c577md1cx2hht"
+path.s3tc="res://.godot/imported/SunsetSky.png-2cf4b5609157b9555e45c7f7f42c70d3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/DarkPrototypeTexture.png"
-dest_files=["res://.godot/imported/DarkPrototypeTexture.png-7076d870e2cdc1148bc8f4c589ab5ef6.s3tc.ctex"]
+source_file="res://addons/SunsetSky.png"
+dest_files=["res://.godot/imported/SunsetSky.png-2cf4b5609157b9555e45c7f7f42c70d3.s3tc.ctex"]
 
 [params]
 
