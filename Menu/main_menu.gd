@@ -1,8 +1,8 @@
 extends Control
 
 # Exported variables for easy configuration in the Godot editor
-@export var game_scene_path: String = "D:/projectngmgapogi/pizzamap.tscn"  # Path to your game scene
-@export var options_scene_path: String = "res://Scenes/Options.tscn"  # Path to your options scene
+@export var game_scene_path: String = "res://pizzamap.tscn"  # Path to your game scene
+@export var options_scene_path: String = "res://settings.tscn"  # Path to your options scene
 
 # References to the buttons (Godot will connect these automatically if nodes are named correctly)
 @onready var start_button = $Start
