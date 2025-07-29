@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://by6q5lrlb833q"]
+[gd_scene load_steps=3 format=3 uid="uid://by6q5lrlb833q"]
 
 [ext_resource type="Script" uid="uid://b8pyfgxp15le1" path="res://audio_manager.gd" id="1_jisk1"]
+[ext_resource type="Script" uid="uid://bv1cttxnjhet8" path="res://option_menu.gd" id="2_bq1v2"]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_jisk1")
@@ -9,38 +10,42 @@ script = ExtResource("1_jisk1")
 
 [node name="OptionMenu" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="MenuContainer" type="VBoxContainer" parent="OptionMenu"]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -61.0
+offset_top = -47.0
+offset_right = 61.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_bq1v2")
+
+[node name="MenuContainer" type="VBoxContainer" parent="OptionMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VolumeLabel" type="Label" parent="OptionMenu"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="VolumeLabel" type="Label" parent="OptionMenu/MenuContainer"]
+layout_mode = 2
+text = "VOLUME"
 
-[node name="VolumeSlider" type="HSlider" parent="OptionMenu"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 16.0
+[node name="VolumeSlider" type="HSlider" parent="OptionMenu/MenuContainer"]
+layout_mode = 2
 max_value = 1.0
 step = 0.01
 value = 0.5
+scrollable = false
 
-[node name="Mute" type="Button" parent="OptionMenu"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="Mute" type="Button" parent="OptionMenu/MenuContainer"]
+layout_mode = 2
+toggle_mode = true
+text = "MUTE AUDIO"
+
+[connection signal="value_changed" from="OptionMenu/MenuContainer/VolumeSlider" to="OptionMenu" method="_on_volume_slider_value_changed"]
+[connection signal="toggled" from="OptionMenu/MenuContainer/Mute" to="OptionMenu" method="_on_mute_toggled"]
