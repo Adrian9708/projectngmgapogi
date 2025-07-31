@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dgujsmaaift45"]
+[gd_scene load_steps=11 format=3 uid="uid://dgujsmaaift45"]
 
 [ext_resource type="Texture2D" uid="uid://c0p81o71xb7wi" path="res://Menu/Pizza.webp" id="1_7yhg3"]
 [ext_resource type="Script" uid="uid://dlciumskvw24w" path="res://Menu/main_menu.gd" id="1_cs38m"]
@@ -8,15 +8,23 @@
 texture = ExtResource("1_7yhg3")
 modulate_color = Color(0.733005, 0.733005, 0.733005, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b07fi"]
-corner_radius_top_left = 7
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akgk3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6lt7"]
-bg_color = Color(0, 0, 0, 0.0745098)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cs38m"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4nr7d"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kkapj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hjc54"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ds052"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -57,10 +65,13 @@ offset_right = 102.0
 offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.999754, 0.245722, 0.188272, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_cs38m")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_b07fi")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_akgk3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cs38m")
 text = "Start"
 
 [node name="Option" type="Button" parent="."]
@@ -76,8 +87,13 @@ offset_right = 102.0
 offset_bottom = 76.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.262745, 0.447059, 0.960784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_cs38m")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_4nr7d")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kkapj")
 text = "Option"
 
 [node name="Exit" type="Button" parent="."]
@@ -93,10 +109,13 @@ offset_right = 102.0
 offset_bottom = 135.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.190762, 0.190762, 0.190762, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_cs38m")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_x6lt7")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_hjc54")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ds052")
 text = "Exit"
 
 [node name="Label4" type="Label" parent="."]
@@ -104,18 +123,19 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -139.0
-offset_top = 66.0
-offset_right = 239.0
-offset_bottom = 135.0
+offset_left = -275.0
+offset_top = 70.0
+offset_right = 275.0
+offset_bottom = 184.0
 grow_horizontal = 2
 theme_override_colors/font_shadow_color = Color(0.690196, 0.0980392, 0.027451, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_offset_y = 2
-theme_override_constants/outline_size = 0
-theme_override_constants/shadow_outline_size = 0
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
 theme_override_fonts/font = ExtResource("2_cs38m")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 100
 text = "   Johnny's "
 
 [node name="Label5" type="Label" parent="."]
@@ -123,15 +143,17 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -63.0
-offset_top = 119.0
-offset_right = 104.0
-offset_bottom = 188.0
+offset_left = -133.0
+offset_top = 150.0
+offset_right = 133.0
+offset_bottom = 264.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0.403922, 1, 1)
 theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
 theme_override_fonts/font = ExtResource("2_cs38m")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 100
 text = "Pizza"
