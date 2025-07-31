@@ -12,7 +12,7 @@ var is_muted: bool = false
 
 func _ready():
 	# Get the AudioStreamPlayer child node
-	audio_player = $MusicPlayer
+	audio_player = $MusicPlayer	
 	
 	# Load saved settings
 	var config = ConfigFile.new()
