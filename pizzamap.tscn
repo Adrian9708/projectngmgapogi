@@ -316,7 +316,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -6)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -10)
 
 [node name="building_C_withoutBase2" parent="." instance=ExtResource("20_3elww")]
-transform = Transform3D(0.41923, 0, 0.90788, 0, 1, 0, -0.90788, 0, 0.41923, -6, 0, -10)
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -6, 0, -10)
 
 [node name="bench5" parent="." instance=ExtResource("18_mhpks")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0.1, -4)
@@ -1074,10 +1074,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, -16)
 transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, 26, 0, -16)
 
 [node name="base150" parent="." instance=ExtResource("14_yvpnp")]
-transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, 26, -0.100249, -16)
+transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, 25.9765, -0.0939571, -16)
 
 [node name="base152" parent="." instance=ExtResource("14_yvpnp")]
-transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, 26, -0.205494, -16)
+transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, 25.9524, -0.192733, -16)
 
 [node name="trash_A7" parent="." instance=ExtResource("35_ecmx4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5302, 0.0999999, -16.1198)
