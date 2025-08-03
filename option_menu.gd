@@ -16,6 +16,10 @@ func _ready():
 		# Set mute button
 		mute_button.button_pressed = is_muted
 		update_mute_button_text(is_muted)
+	if get_tree().current_scene == get_parent():
+		show()
+	else:
+		hide()
 
 func _on_volume_slider_value_changed(value):
 	# Update volume in real-time
@@ -32,4 +36,4 @@ func update_mute_button_text(is_muted: bool):
 
 
 func _on_mute_toggled(toggled_on: bool) -> void:
-	pass # Replace with function body.
+		pass # Replace with function body.

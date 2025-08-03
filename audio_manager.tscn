@@ -20,6 +20,7 @@ stream = ExtResource("2_6jj5d")
 autoplay = true
 
 [node name="OptionMenu" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
