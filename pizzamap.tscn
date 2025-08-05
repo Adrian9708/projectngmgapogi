@@ -81,7 +81,7 @@ fog_density = 0.05
 fog_sky_affect = 0.0
 fog_height_density = 1.449
 
-[node name="TestCity" type="Node3D"]
+[node name="Map" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.614444, 0.3113, -0.724949, 0.0201866, 0.924769, 0.379994, 0.788702, 0.218851, -0.574503, 3.791, 11.7758, -1.25189)
