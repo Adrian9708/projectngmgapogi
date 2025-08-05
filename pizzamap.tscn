@@ -4118,3 +4118,11 @@ visible = false
 [node name="pizza wall 3" parent="." instance=ExtResource("14_yvpnp")]
 transform = Transform3D(4.63371e-08, -0.393923, -0.0694593, 5.41912e-09, -0.0694593, 0.393923, -0.356972, -5.2188e-08, -3.03616e-09, 1.3302, 0.508867, -12.0022)
 visible = false
+
+[node name="base211" parent="." instance=ExtResource("14_yvpnp")]
+transform = Transform3D(0.360166, -7.94445e-09, -0.0628846, 0.0175692, 0.98735, 0.032408, 0.109407, -0.158554, 0.201811, 2.5644, 0.317091, -24.0215)
+visible = false
+
+[node name="base212" parent="." instance=ExtResource("14_yvpnp")]
+transform = Transform3D(-0.0171651, 0.607015, 0.169667, 0.0131114, 0.79469, -0.129598, -0.376207, 0, -0.012258, -8.75329, 0.371728, -22.9347)
+visible = false
