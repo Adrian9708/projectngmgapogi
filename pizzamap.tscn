@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://04qspb6cwmfg"]
+[gd_scene load_steps=61 format=3 uid="uid://04qspb6cwmfg"]
 
 [ext_resource type="Texture2D" uid="uid://c577md1cx2hht" path="res://addons/SunsetSky.png" id="1_h2ga4"]
 [ext_resource type="PackedScene" uid="uid://becoxhxfk1pui" path="res://addons/kaykit_city_builder_bits/Assets/gltf/road_junction.gltf" id="1_w7lvx"]
@@ -56,6 +56,7 @@
 [ext_resource type="PackedScene" uid="uid://x55v6uv75yg1" path="res://addons/Ultimate Nature Pack by Quaternius/FBX/BirchTree_Dead_2.fbx" id="54_iy4p1"]
 [ext_resource type="PackedScene" uid="uid://djd2ev1ii4qts" path="res://addons/Ultimate Nature Pack by Quaternius/FBX/BirchTree_3.fbx" id="55_rpkx2"]
 [ext_resource type="PackedScene" uid="uid://b2fv6pbdrlf13" path="res://addons/Ultimate Nature Pack by Quaternius/FBX/BirchTree_5.fbx" id="56_kcfoa"]
+[ext_resource type="PackedScene" uid="uid://cyi3tvqbu3gqe" path="res://pizzashop.blend" id="57_iy4p1"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_h2ga4"]
 panorama = ExtResource("1_h2ga4")
@@ -769,7 +770,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0.1, -15)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0.1, -13)
 
 [node name="Player" parent="." instance=ExtResource("37_mhpks")]
-transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 17.9432, 1.07042, -14.0615)
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 2.00547, 0.1, -11.1807)
 floor_max_angle = 0.872665
 speed = 1.5
 jump_velocity = 2.0
@@ -1483,9 +1484,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -18)
 
 [node name="base171" parent="." instance=ExtResource("14_yvpnp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -14)
-
-[node name="building_D8" parent="." instance=ExtResource("11_he1t5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -12)
 
 [node name="building_C5" parent="." instance=ExtResource("10_gexpu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
@@ -4095,3 +4093,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -26)
 
 [node name="road_straight11" parent="." instance=ExtResource("2_txj3q")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 0, 0)
+
+[node name="base148" parent="." instance=ExtResource("14_yvpnp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -12)
+
+[node name="pizzashop" parent="." instance=ExtResource("57_iy4p1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 5951, -12)
+
+[node name="pizzashop2" parent="." instance=ExtResource("57_iy4p1")]
+transform = Transform3D(-6.55671e-09, 0, -0.15, 0, 0.15, 0, 0.15, 0, -6.55671e-09, 1.589, 0.2, -11.811)
+
+[node name="pizza wall" parent="." instance=ExtResource("14_yvpnp")]
+transform = Transform3D(0.607786, 0, 0, 0, -3.0598e-08, 0.57991, 0, -0.7, -2.53487e-08, 1.98225, 0.223657, -11.619)
+visible = false
+
+[node name="pizza wall 1" parent="." instance=ExtResource("14_yvpnp")]
+transform = Transform3D(0.602807, 0, 0, 0, -3.0598e-08, 0.562616, 0, -0.7, -2.45927e-08, 1.96671, 0.223657, -12.3279)
+visible = false
+
+[node name="pizza wall 2" parent="." instance=ExtResource("14_yvpnp")]
+transform = Transform3D(-1.478e-08, -0.393923, 0.0694593, 0, 0.0694593, 0.393923, -0.338126, 1.72189e-08, -3.03616e-09, 2.66404, 0.508867, -12.0022)
+visible = false
+
+[node name="pizza wall 3" parent="." instance=ExtResource("14_yvpnp")]
+transform = Transform3D(4.63371e-08, -0.393923, -0.0694593, 5.41912e-09, -0.0694593, 0.393923, -0.356972, -5.2188e-08, -3.03616e-09, 1.3302, 0.508867, -12.0022)
+visible = false
