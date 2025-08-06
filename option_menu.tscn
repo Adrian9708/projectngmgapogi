@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://oaolpgymdkmm"]
+
+[ext_resource type="Script" uid="uid://bv1cttxnjhet8" path="res://option_menu.gd" id="1_ggsak"]
+
+[node name="OptionMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -61.0
+offset_top = -47.0
+offset_right = 61.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ggsak")
+
+[node name="MenuContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VolumeLabel" type="Label" parent="MenuContainer"]
+layout_mode = 2
+text = "VOLUME"
+
+[node name="VolumeSlider" type="HSlider" parent="MenuContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 0.5
+scrollable = false
+
+[node name="Mute" type="Button" parent="MenuContainer"]
+layout_mode = 2
+toggle_mode = true
+text = "MUTE AUDIO"
+
+[connection signal="value_changed" from="MenuContainer/VolumeSlider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="toggled" from="MenuContainer/Mute" to="." method="_on_mute_button_toggled"]
