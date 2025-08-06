@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8ksnpmux55wd"]
+
+[ext_resource type="PackedScene" path="res://addons/GodotFirstPersonController-3.2/player.tscn" id="1_6vt2t"]
+[ext_resource type="PackedScene" uid="uid://cw6qnh0kym5vt" path="res://addons/kaykit_city_builder_bits/Assets/gltf/base.gltf" id="2_yf3ri"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_6vt2t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.585686, 0, -0.194399)
+
+[node name="base2" parent="." instance=ExtResource("2_yf3ri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+
+[node name="base3" parent="." instance=ExtResource("2_yf3ri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="base4" parent="." instance=ExtResource("2_yf3ri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="base5" parent="." instance=ExtResource("2_yf3ri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
