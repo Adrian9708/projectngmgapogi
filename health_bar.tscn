@@ -59,3 +59,11 @@ offset_bottom = 27.0
 theme_override_colors/font_color = Color(0.34135, 0.658473, 1.92523e-07, 1)
 theme_override_font_sizes/font_size = 30
 text = "$ 100"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 101.0
+offset_right = 177.0
+offset_bottom = 136.0
+text = "Pizza Delivered 0/10"
