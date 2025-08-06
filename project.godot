@@ -23,7 +23,7 @@ AudioManager="*res://audio_manager.tscn"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/stretch/mode="viewport"
+window/size/mode=3
 
 [input]
 
