@@ -20,25 +20,25 @@ grow_vertical = 2
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 layout_mode = 0
-offset_left = -13.0
-offset_top = 1.0
-offset_right = 27.0
-offset_bottom = 41.0
+offset_left = -12.0
+offset_top = 3.0
+offset_right = 28.0
+offset_bottom = 43.0
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 layout_mode = 0
-offset_left = 18.0
+offset_left = 10.0
 offset_top = 24.0
-offset_right = 218.0
-offset_bottom = 44.0
+offset_right = 154.0
+offset_bottom = 38.0
 theme_override_styles/background = SubResource("StyleBoxFlat_m7ell")
 theme_override_styles/fill = SubResource("StyleBoxFlat_kdjhy")
-value = 60.0
+value = 100.0
 show_percentage = false
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(118, 35)
-scale = Vector2(5, 5)
+position = Vector2(81.5, 31.5)
+scale = Vector2(3.47917, 4.17647)
 texture = ExtResource("1_m7ell")
 hframes = 7
 vframes = 14
@@ -46,24 +46,24 @@ vframes = 14
 [node name="Money Icon" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 9.0
-offset_top = 77.0
+offset_top = 75.0
 offset_right = 53.0
-offset_bottom = 125.0
+offset_bottom = 123.0
 
 [node name="Money label" type="Label" parent="Money Icon"]
 layout_mode = 0
 offset_left = -11.0
-offset_top = -15.0
-offset_right = 113.0
-offset_bottom = 27.0
+offset_top = -20.0
+offset_right = 42.0
+offset_bottom = 10.0
 theme_override_colors/font_color = Color(0.34135, 0.658473, 1.92523e-07, 1)
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 21
 text = "$ 100"
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="Money Icon"]
 layout_mode = 0
-offset_left = -1.0
-offset_top = 101.0
-offset_right = 177.0
-offset_bottom = 136.0
+offset_left = -11.0
+offset_top = 9.0
+offset_right = 167.0
+offset_bottom = 44.0
 text = "Pizza Delivered 0/10"
