@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dgujsmaaift45"]
+[gd_scene load_steps=12 format=3 uid="uid://dgujsmaaift45"]
 
 [ext_resource type="Texture2D" uid="uid://c0p81o71xb7wi" path="res://Menu/Pizza.webp" id="1_7yhg3"]
 [ext_resource type="Script" uid="uid://dlciumskvw24w" path="res://Menu/main_menu.gd" id="1_cs38m"]
@@ -7,6 +7,8 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rlxw3"]
 texture = ExtResource("1_7yhg3")
 modulate_color = Color(0.733005, 0.733005, 0.733005, 1)
+
+[sub_resource type="Theme" id="Theme_cs38m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akgk3"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -65,6 +67,7 @@ offset_right = 102.0
 offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_cs38m")
 theme_override_colors/font_hover_color = Color(0.999754, 0.245722, 0.188272, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
@@ -87,6 +90,7 @@ offset_right = 102.0
 offset_bottom = 76.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_cs38m")
 theme_override_colors/font_hover_color = Color(0.262745, 0.447059, 0.960784, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
@@ -109,6 +113,7 @@ offset_right = 102.0
 offset_bottom = 135.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_cs38m")
 theme_override_colors/font_hover_color = Color(0.190762, 0.190762, 0.190762, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10

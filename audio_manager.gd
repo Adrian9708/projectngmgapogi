@@ -2,8 +2,8 @@ extends Node
 
 # Preload music tracks as resources
 var tracks = {
-	"track1": preload("res://zombie-packclean-record-70768.mp3"),
-	"track2": preload("res://zombie-packclean-record-70768.mp3")
+	"track1": preload("res://Graveyard Waltz (Main Menu).mp3"),
+	"track2": preload("res://Graveyard Waltz (Main Menu).mp3")
 }
 
 var current_track: String = ""

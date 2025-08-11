@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b76b2k6gxe8i"
+path="res://.godot/imported/Zombie Victory Parade (Victory).mp3-36f3a33a75c94934cfa7d5c6d6f78566.mp3str"
+
+[deps]
+
+source_file="res://Zombie Victory Parade (Victory).mp3"
+dest_files=["res://.godot/imported/Zombie Victory Parade (Victory).mp3-36f3a33a75c94934cfa7d5c6d6f78566.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
