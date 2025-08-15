@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c8rr0c1q17nnb"]
+[gd_scene load_steps=17 format=3 uid="uid://c8rr0c1q17nnb"]
 
 [ext_resource type="Script" uid="uid://d3n7ve82no1f7" path="res://enemy.gd" id="1_7k104"]
 [ext_resource type="PackedScene" uid="uid://b5i6popdmp2er" path="res://models/GLB format/character-male-f.glb" id="2_4gyqm"]
@@ -6,6 +6,63 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_4gyqm"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qi2p4"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4gyqm"]
+animation = &"attack-melee-right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qi2p4"]
+animation = &"die"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_iifgy"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_epg4t"]
+animation = &"sprint"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3yqyl"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wujgv"]
+xfade_time = 0.2
+advance_mode = 2
+advance_condition = &"Run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hb8ge"]
+xfade_time = 0.2
+advance_mode = 2
+advance_condition = &"Attack"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_e1ltt"]
+xfade_time = 0.2
+advance_mode = 2
+advance_condition = &"Death"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dxifv"]
+xfade_time = 0.2
+advance_mode = 2
+advance_condition = &"Death"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pwjut"]
+xfade_time = 0.2
+advance_mode = 2
+advance_condition = &"Death"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n0g06"]
+xfade_time = 0.2
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ar8e5"]
+states/Start/position = Vector2(184, 133)
+states/attack-melee-right/node = SubResource("AnimationNodeAnimation_4gyqm")
+states/attack-melee-right/position = Vector2(688, 108)
+states/die/node = SubResource("AnimationNodeAnimation_qi2p4")
+states/die/position = Vector2(561, 41)
+states/idle/node = SubResource("AnimationNodeAnimation_iifgy")
+states/idle/position = Vector2(348, 128)
+states/sprint/node = SubResource("AnimationNodeAnimation_epg4t")
+states/sprint/position = Vector2(496, 108)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_3yqyl"), "idle", "sprint", SubResource("AnimationNodeStateMachineTransition_wujgv"), "sprint", "attack-melee-right", SubResource("AnimationNodeStateMachineTransition_hb8ge"), "attack-melee-right", "die", SubResource("AnimationNodeStateMachineTransition_e1ltt"), "sprint", "die", SubResource("AnimationNodeStateMachineTransition_dxifv"), "idle", "die", SubResource("AnimationNodeStateMachineTransition_pwjut"), "attack-melee-right", "sprint", SubResource("AnimationNodeStateMachineTransition_n0g06")]
 
 [node name="Enemy" type="CharacterBody3D"]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -16,6 +73,7 @@ visible = false
 mesh = SubResource("CapsuleMesh_4gyqm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.86, 0, 0, 0, 0.86, 0, 0, 0, 0.86, 0, -0.5, 0)
 shape = SubResource("CapsuleShape3D_qi2p4")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
@@ -31,5 +89,13 @@ bones/5/scale = Vector3(1, 1, 1)
 
 [node name="AnimationPlayer" parent="character-male-f2" index="1"]
 autoplay = "sprint"
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+root_node = NodePath("../character-male-f2")
+tree_root = SubResource("AnimationNodeStateMachine_ar8e5")
+anim_player = NodePath("../character-male-f2/AnimationPlayer")
+parameters/conditions/Attack = false
+parameters/conditions/Death = false
+parameters/conditions/Run = false
 
 [editable path="character-male-f2"]
