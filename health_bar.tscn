@@ -82,3 +82,5 @@ offset_top = 118.0
 offset_right = 70.0
 offset_bottom = 141.0
 text = "Time: 60"
+
+[connection signal="timeout" from="Money Icon/Delivery time" to="." method="_on_delivery_time_timeout"]
