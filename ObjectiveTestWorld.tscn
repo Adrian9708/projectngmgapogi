@@ -772,8 +772,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0.1, -13)
 [node name="Player" parent="." instance=ExtResource("38_8qib3")]
 transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 2.00547, 0.1, -11.1807)
 floor_max_angle = 0.872665
-speed = 1.5
-jump_velocity = 2.0
 
 [node name="MouseLock" parent="Player" instance=ExtResource("39_8mqlp")]
 
