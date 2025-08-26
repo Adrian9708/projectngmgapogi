@@ -1,16 +1,20 @@
 extends Control
-var money = 100
+var money = 0
 var pizzas_delivered = 0
 @onready var health_bar: ProgressBar = $ProgressBar
 @onready var money_: Label = $"Money Icon/Money label"
 @onready var delivered_pizza_label: Label = $"Money Icon/Delivery Counts"
-@onready var timer_label: Label = $"Delivery time/Timer Label"
+@onready var timer_label: Label = $"Money Icon/Timer Label"
 
 # CHANGED: 60 second delivery timer
 var countdown_time: float = 60.0
 var timer_active: bool = false
+var space_was_pressed: bool = false  # Add this as a class variable
 
 func _ready():
+	# IMPORTANT: Make sure this node can receive input
+	set_process_input(true)
+	
 	# Initialize health bar to full (100)
 	if health_bar:
 		health_bar.max_value = 100
@@ -30,19 +34,21 @@ func _ready():
 	# Start first delivery timer
 	start_delivery_timer()
 
-# ADD THIS: Handle input for space key
-func _input(event):
-	print("Input detected: ", event)  # Debug line
+# FIXED: Use _unhandled_input instead of _input
+func _unhandled_input(event):
 	if event is InputEventKey and event.pressed:
-		print("Key pressed: ", event.keycode, " Space key is: ", KEY_SPACE)  # Debug line
 		if event.keycode == KEY_SPACE:
-			print("SPACE KEY DETECTED!")  # Debug line
+			print("SPACE KEY DETECTED!")  # Keep this one for space key confirmation
 			trigger_delivery()
-	elif event.is_action_pressed("ui_accept"):
-		print("UI_ACCEPT pressed!")  # Debug line
-		trigger_delivery()
+			get_viewport().set_input_as_handled()  # Mark input as handled
 
+# ALTERNATIVE: Also check in _process for direct key polling
 func _process(delta):
+	# Simple space key detection - this should definitely work
+	if Input.is_action_just_pressed("ui_accept"):  # Space is mapped to ui_accept by default
+		print("SPACE KEY PRESSED!")
+		trigger_delivery()
+	
 	if timer_active:
 		countdown_time -= delta  # Count down from 60 seconds
 		
@@ -61,6 +67,9 @@ func update_timer_display():
 			var seconds = int(countdown_time) % 60
 			timer_label.text = "Deliver in: " + str(minutes) + ":" + "%02d" % seconds
 			
+			# Make sure timer is visible
+			timer_label.visible = true
+			
 			# Change color when time is running low
 			if countdown_time < 10.0:  # Last 10 seconds
 				timer_label.modulate = Color.RED
@@ -68,14 +77,26 @@ func update_timer_display():
 				timer_label.modulate = Color.ORANGE
 			else:
 				timer_label.modulate = Color.YELLOW
+				
+			print("Timer display updated: ", timer_label.text)  # Debug line
 		else:
 			timer_label.text = "Ready for delivery!"
 			timer_label.modulate = Color.GREEN
+			timer_label.visible = true
+	else:
+		print("Timer label not found!")  # Debug line
 
 func start_delivery_timer():
 	countdown_time = 60.0  # 1 minute timer
 	timer_active = true
 	print("New delivery started! You have 60 seconds!")
+	
+	# Make sure timer label is visible and updated
+	if timer_label:
+		timer_label.visible = true
+		update_timer_display()
+	else:
+		print("ERROR: Timer label not found in start_delivery_timer!")
 
 # Called when player successfully delivers pizza (call this from your delivery mechanism)
 func deliver_pizza_success():
@@ -163,3 +184,8 @@ func trigger_delivery():
 		deliver_pizza_success()
 	else:
 		print("Timer is not active, cannot deliver!")  # Debug line
+
+# Add this function for compatibility with other scripts that might call it
+func deliver_pizza():
+	print("deliver_pizza() called - redirecting to deliver_pizza_success()")
+	deliver_pizza_success()
