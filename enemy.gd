@@ -5,7 +5,7 @@ var player = null
 var hp = 100
 
 const SPEED = 1.35
-const SIGHT_RANGE = 10.0
+const SIGHT_RANGE = 5.0
 const ATTACK_RANGE = 0.5
 const DAMAGE = 5
 const ATTACK_COOLDOWN = 1.5

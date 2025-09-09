@@ -2802,7 +2802,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -14)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -20)
 
 [node name="floor_base4" parent="NavigationRegion3D" instance=ExtResource("39_3elww")]
-transform = Transform3D(2.08, 0, 0, 0, 1, 0, 0, 0, 1.1, 14, 0.05, -27)
+transform = Transform3D(1.83073, 0, 0, 0, 1, 0, 0, 0, 1.22833, 14, 0.0645812, -27)
 
 [node name="floor_base5" parent="NavigationRegion3D" instance=ExtResource("39_3elww")]
 transform = Transform3D(2.08, 0, 0, 0, 1, 0, 0, 0, 1.1, 35, 0, -29)
@@ -4115,19 +4115,171 @@ transform = Transform3D(-0.0171651, 0.607015, 0.169667, 0.0131114, 0.79469, -0.1
 visible = false
 
 [node name="Enemy" parent="." instance=ExtResource("58_rpkx2")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 1.24496, 0.70821, -3.29977)
-player_path = NodePath("../Player")
-
-[node name="Enemy3" parent="." instance=ExtResource("58_rpkx2")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 2.24496, 0.70821, -3.29977)
-player_path = NodePath("../Player")
-
-[node name="Enemy4" parent="." instance=ExtResource("58_rpkx2")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 2.24496, 0.70821, -2.29977)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 1.24496, 0.70821, 5.70023)
 player_path = NodePath("../Player")
 
 [node name="Enemy2" parent="." instance=ExtResource("58_rpkx2")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 1.34334, 0.682591, -2.38797)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 7.24496, 0.70821, 3.70023)
+player_path = NodePath("../Player")
+
+[node name="Enemy3" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -8.75504, 0.70821, -0.29977)
+player_path = NodePath("../Player")
+
+[node name="Enemy4" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -14.755, 0.70821, -0.29977)
+player_path = NodePath("../Player")
+
+[node name="Enemy5" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -10.755, 0.70821, -8.29977)
+player_path = NodePath("../Player")
+
+[node name="Enemy6" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -10.755, 0.70821, -19.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy7" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -10.755, 0.70821, -11.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy8" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -5.75504, 0.70821, -14.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy9" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -2.75504, 0.70821, -14.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy10" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -2.75504, 0.70821, -18.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy11" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -6.75504, 0.70821, -18.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy12" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.24496, 0.70821, -18.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy13" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -3.75504, 0.70821, -22.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy14" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -7.75504, 0.70821, -22.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy15" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -7.75504, 0.70821, -27.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy16" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 3.24496, 0.70821, -30.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy17" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -6.75504, 0.70821, -30.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy18" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 4.24496, 0.70821, -27.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy19" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 14.245, 0.70821, -25.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy20" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 7.24496, 0.70821, -25.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy21" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 7.24496, 0.70821, -22.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy22" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 18.245, 0.70821, -19.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy23" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 23.245, 0.70821, -14.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy24" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 11.245, 0.70821, -6.29977)
+player_path = NodePath("../Player")
+
+[node name="Enemy25" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 18.245, 0.70821, -6.29977)
+player_path = NodePath("../Player")
+
+[node name="Enemy26" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 48.245, 0.70821, -12.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy27" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 44.245, 0.70821, -12.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy28" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 44.245, 0.70821, -16.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy29" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 40.245, 0.70821, -16.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy30" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 40.245, 0.70821, -22.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy31" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 50.245, 0.70821, -22.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy32" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 56.245, 0.70821, -22.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy33" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 56.245, 0.70821, -13.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy34" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 50.245, 0.70821, -13.2998)
+player_path = NodePath("../Player")
+
+[node name="Enemy35" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 50.245, 0.70821, -2.29977)
+player_path = NodePath("../Player")
+
+[node name="Enemy36" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 70.245, 0.70821, -2.29977)
+player_path = NodePath("../Player")
+
+[node name="Enemy37" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 70.245, 0.70821, 4.70023)
+player_path = NodePath("../Player")
+
+[node name="Enemy38" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 70.245, 0.70821, 9.70023)
+player_path = NodePath("../Player")
+
+[node name="Enemy39" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 74.245, 0.70821, 9.70023)
+player_path = NodePath("../Player")
+
+[node name="Enemy40" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 74.245, 0.70821, 3.70023)
+player_path = NodePath("../Player")
+
+[node name="Enemy41" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 80.245, 0.70821, 3.70023)
+player_path = NodePath("../Player")
+
+[node name="Enemy42" parent="." instance=ExtResource("58_rpkx2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 80.245, 0.70821, -0.29977)
 player_path = NodePath("../Player")
 
 [node name="road_straight2" parent="." instance=ExtResource("2_txj3q")]
