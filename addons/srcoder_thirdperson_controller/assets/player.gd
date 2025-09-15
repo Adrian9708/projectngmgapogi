@@ -52,8 +52,24 @@ func _physics_process(delta: float) -> void:
 			animation_player.play("sprint")
 		animation_state.JUMPING:
 			animation_player.play("jump")
-
+	
+	#TEST INPUTS
+	if Input.is_action_just_pressed("ui_accept"):
+		deliver_pizza()
+		
+	if Input.is_action_just_pressed("ui_copy"):
+		take_damage(-5)
 	
 func rotate_model(direction: Vector3, delta : float) -> void:
 	#rotate the model to match the springarm
 	playermodel.basis = lerp(playermodel.basis, Basis.looking_at(direction), 10.0 * delta)
+
+func deliver_pizza():
+	HealthBar.deliver_pizza()
+	
+func take_damage(amount):
+	HealthBar.update_health(amount)
+	
+func add_money(amount):
+	HealthBar.update_money(amount)
+	
