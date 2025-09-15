@@ -6,7 +6,7 @@
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_lgetq"]
 
-[node name="Area3D" type="Area3D"]
+[node name="DeliveryDestination" type="Area3D"]
 script = ExtResource("1_ls6s3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

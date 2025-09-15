@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://04qspb6cwmfg"]
+[gd_scene load_steps=65 format=3 uid="uid://04qspb6cwmfg"]
 
 [ext_resource type="Texture2D" uid="uid://c577md1cx2hht" path="res://addons/SunsetSky.png" id="1_h2ga4"]
 [ext_resource type="PackedScene" uid="uid://becoxhxfk1pui" path="res://addons/kaykit_city_builder_bits/Assets/gltf/road_junction.gltf" id="1_w7lvx"]
@@ -58,6 +58,8 @@
 [ext_resource type="PackedScene" uid="uid://b2fv6pbdrlf13" path="res://addons/Ultimate Nature Pack by Quaternius/FBX/BirchTree_5.fbx" id="56_kcfoa"]
 [ext_resource type="PackedScene" uid="uid://cyi3tvqbu3gqe" path="res://pizzashop.blend" id="57_iy4p1"]
 [ext_resource type="PackedScene" uid="uid://c8rr0c1q17nnb" path="res://enemy.tscn" id="58_rpkx2"]
+[ext_resource type="Script" uid="uid://c7u87r2u8k2f3" path="res://delivery_manger.gd" id="59_l3g3y"]
+[ext_resource type="PackedScene" uid="uid://pscvnhlmp87a" path="res://destination.tscn" id="60_g0jls"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_h2ga4"]
 panorama = ExtResource("1_h2ga4")
@@ -99,7 +101,7 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_3elww")
 
-[node name="Player" parent="." instance=ExtResource("37_mhpks")]
+[node name="Player" parent="." groups=["player"] instance=ExtResource("37_mhpks")]
 transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 2.00547, 0.1, -11.1807)
 collision_layer = 1
 floor_max_angle = 0.872665
@@ -4296,3 +4298,9 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, 0, 
 
 [node name="road_straight5" parent="." instance=ExtResource("2_txj3q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -26)
+
+[node name="DeliveryManager" type="Node3D" parent="."]
+script = ExtResource("59_l3g3y")
+
+[node name="DeliveryDestination" parent="." instance=ExtResource("60_g0jls")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8734, 0, -0.509073)
