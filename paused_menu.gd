@@ -20,17 +20,17 @@ func toggle_pause():
 func pause_game():
 	get_tree().paused = true
 	visible = true
+	# Show cursor for menu interaction
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	print("Menu should be visible:", visible)
-	# Don't change mouse mode here - let it stay as is for menu interaction
 
 func resume_game():
 	get_tree().paused = false
 	visible = false
+	# Hide cursor when returning to game (if your game normally hides it)
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)  # Or MOUSE_MODE_HIDDEN
 	print("Menu should be hidden:", visible)
-	# Only hide cursor if your game normally hides it
-	# Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
-# These functions need to be connected to your buttons
 func _on_resume_pressed():
 	print("Resume button clicked")
 	resume_game()
@@ -38,6 +38,8 @@ func _on_resume_pressed():
 func _on_restart_pressed():
 	print("Restart button clicked")
 	get_tree().paused = false
+	# Hide cursor before restarting
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)  # Or whatever your game uses
 	get_tree().reload_current_scene()
 
 func _on_quit_pressed():

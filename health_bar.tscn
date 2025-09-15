@@ -36,7 +36,7 @@ offset_right = 154.0
 offset_bottom = 38.0
 theme_override_styles/background = SubResource("StyleBoxFlat_m7ell")
 theme_override_styles/fill = SubResource("StyleBoxFlat_kdjhy")
-value = 50.0
+value = 100.0
 show_percentage = false
 
 [node name="Texture" type="Sprite2D" parent="."]
