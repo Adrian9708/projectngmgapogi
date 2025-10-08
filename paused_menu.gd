@@ -3,11 +3,14 @@ extends Control
 func _ready():
 	visible = false
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	print("Pause menu ready. Node name: ", name)
 
 func _input(event):
 	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
-		print("ESC pressed - current paused state:", get_tree().paused)
+		print("\n=== ESC PRESSED ===")
+		print("Current paused state:", get_tree().paused)
 		toggle_pause()
+		get_viewport().set_input_as_handled()
 
 func toggle_pause():
 	if get_tree().paused:
@@ -20,16 +23,23 @@ func toggle_pause():
 func pause_game():
 	get_tree().paused = true
 	visible = true
-	# Show cursor for menu interaction
+	show()
+	modulate = Color(1, 1, 1, 1)  # Ensure it's not transparent
+	z_index = 100  # Bring to front
+	
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	print("Menu should be visible:", visible)
+	
+	print("After pause_game():")
+	print("  - Tree paused:", get_tree().paused)
+	print("  - Menu visible:", visible)
+	print("  - Parent node:", get_parent().name if get_parent() else "NO PARENT")
 
 func resume_game():
 	get_tree().paused = false
 	visible = false
-	# Hide cursor when returning to game (if your game normally hides it)
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)  # Or MOUSE_MODE_HIDDEN
-	print("Menu should be hidden:", visible)
+	hide()
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	print("Game resumed")
 
 func _on_resume_pressed():
 	print("Resume button clicked")
@@ -38,8 +48,7 @@ func _on_resume_pressed():
 func _on_restart_pressed():
 	print("Restart button clicked")
 	get_tree().paused = false
-	# Hide cursor before restarting
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)  # Or whatever your game uses
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	get_tree().reload_current_scene()
 
 func _on_quit_pressed():

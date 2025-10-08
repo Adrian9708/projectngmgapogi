@@ -1,7 +1,7 @@
 extends Control
 var money = 0
 var pizzas_delivered = 0
-@onready var health_bar: ProgressBar = $ProgressBar
+@onready var health_bar: ProgressBar = $Health
 @onready var money_: Label = $"Money Icon/Money label"
 @onready var delivered_pizza_label: Label = $"Money Icon/Delivery Counts"
 @onready var timer_label: Label = $"Money Icon/Timer Label"
@@ -78,7 +78,7 @@ func update_timer_display():
 			else:
 				timer_label.modulate = Color.YELLOW
 				
-			print("Timer display updated: ", timer_label.text)  # Debug line
+			#print("Timer display updated: ", timer_label.text)  # Debug line
 		else:
 			timer_label.text = "Ready for delivery!"
 			timer_label.modulate = Color.GREEN
@@ -151,11 +151,13 @@ func timer_failed():
 	start_delivery_timer()
 
 func update_health(amount):
+	print("updating health")
 	if health_bar:
 		health_bar.value += amount
 		# Make sure health doesn't exceed maximum
 		if health_bar.value > health_bar.max_value:
 			health_bar.value = health_bar.max_value
+
 
 func update_money(money_to_add):
 	money += money_to_add

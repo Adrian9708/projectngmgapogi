@@ -1,8 +1,9 @@
 extends CharacterBody3D
 
 @export_category("Player Movement")
-@export var speed := 5.0
-@export var jump_velocity := 4.5
+@export var speed := 1.5
+@export var jump_velocity := 2
+@export var health = 10
 const ROTATION_SPEED := 6.0
 
 #slowly rotate the charcter to point in the direction of the camera_pivot
@@ -68,6 +69,7 @@ func deliver_pizza():
 	HealthBar.deliver_pizza()
 	
 func take_damage(amount):
+	print("PLAYER TAKE DAMAGE")
 	HealthBar.update_health(amount)
 	
 func add_money(amount):

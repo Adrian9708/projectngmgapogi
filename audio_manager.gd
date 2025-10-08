@@ -1,4 +1,7 @@
-extends Node
+extends Control
+
+var money = 0
+var pizzas_delivered = 0
 
 # Preload music tracks as resources
 var tracks = {
@@ -11,13 +14,17 @@ var audio_player: AudioStreamPlayer
 var is_muted: bool = false
 
 func _ready():
+	# Hide by default - only show when in gameplay scene
+	visible = false
+	
+	set_process_input(true)
 	# Get the AudioStreamPlayer child node
 	audio_player = get_node("MusicPlayer")
 	
 	# Add error checking
 	if audio_player == null:
 		print("Error: MusicPlayer node not found!")
-		return	
+		return
 	
 	# Load saved settings
 	var config = ConfigFile.new()

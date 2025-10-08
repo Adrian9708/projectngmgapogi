@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c8rr0c1q17nnb"]
+[gd_scene load_steps=11 format=3 uid="uid://c8rr0c1q17nnb"]
 
 [ext_resource type="Script" uid="uid://d3n7ve82no1f7" path="res://enemy.gd" id="1_7k104"]
 [ext_resource type="PackedScene" uid="uid://b5i6popdmp2er" path="res://models/GLB format/character-male-f.glb" id="2_4gyqm"]
@@ -341,6 +341,10 @@ _data = {
 &"run": SubResource("Animation_ccdwq")
 }
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4gyqm"]
+height = 0.891724
+radius = 0.793945
+
 [node name="Enemy" type="CharacterBody3D"]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 floor_max_angle = 1.309
@@ -370,5 +374,13 @@ bones/5/rotation = Quaternion(0, 0, 0.382683, 0.92388)
 libraries = {
 &"": SubResource("AnimationLibrary_qskgw")
 }
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.554138, 0)
+shape = SubResource("CylinderShape3D_4gyqm")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 
 [editable path="character-male-f2"]

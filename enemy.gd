@@ -7,7 +7,7 @@ var hp = 100
 const SPEED = 1.35
 const SIGHT_RANGE = 5.0
 const ATTACK_RANGE = 0.5
-const DAMAGE = 5
+const DAMAGE = -5
 const ATTACK_COOLDOWN = 1.5
 
 # Node references
@@ -226,7 +226,10 @@ func _physics_process(delta: float) -> void:
 				look_at(global_position + look_dir.normalized(), Vector3.UP)
 			
 			# Attack if ready
+			#print("CHECK ATTACK READY - COOLDOWN : ", attack_cooldown)
 			if attack_cooldown <= 0:
+				print("ATTACK")
+			
 				attack_player()
 				attack_cooldown = ATTACK_COOLDOWN
 				# Reset animation timer when we actually attack
@@ -311,7 +314,7 @@ func play_state_animation(state: String):
 		"attack":
 			target_anim = find_animation_by_name("attack")
 			# For attack, also reset the animation timer
-			attack_animation_timer = 0.0
+			#attack_animation_timer = 0.0
 		"dead":
 			target_anim = find_animation_by_name("death")
 			if target_anim == "":
@@ -402,3 +405,9 @@ func die() -> void:
 	
 	await get_tree().create_timer(3.0).timeout
 	queue_free()
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body.name == "Player":
+		current_state = "attack"
+		

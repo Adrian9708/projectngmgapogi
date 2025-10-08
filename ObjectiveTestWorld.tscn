@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://e1u6e1b05kam"]
+[gd_scene load_steps=61 format=3 uid="uid://ddo3nwotsxjxo"]
 
 [ext_resource type="Texture2D" uid="uid://c577md1cx2hht" path="res://addons/SunsetSky.png" id="1_3beyv"]
 [ext_resource type="PackedScene" uid="uid://becoxhxfk1pui" path="res://addons/kaykit_city_builder_bits/Assets/gltf/road_junction.gltf" id="2_rry2s"]
